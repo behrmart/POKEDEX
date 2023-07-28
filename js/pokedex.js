@@ -14,6 +14,8 @@ function boton_buscar(){
             cb(data)
         });
     }
+
+
     
     loadPokemon(pokename.value,(pokemon) => {
         console.log(pokemon);
@@ -21,20 +23,22 @@ function boton_buscar(){
         let pokecard = document.getElementById("pokecard");
     /*Propiedad de JS para modificar contenido HTML, devuelve una cadena de texto */
         pokecard.innerHTML =    
-        `<div class="card text-center">
-            <img src="${pokemon.sprites.front_default}" class="card-img-top" alt="Pokemon image">
-            <div class="card-header text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">
-                ${pokemon.name}
-            </div>
-            <div class="card-body text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-              <p class="card-text">Id: ${pokemon.id}</p>
-              <p class="card-text">Order: ${pokemon.order}</p>
-              <p class="card-text">Weight: ${pokemon.weight}</p>
+        `<div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="${pokemon.sprites.front_default}" class="card-img-top" alt="Pokemon image">
+                </div>
+                <div class="col-md-8">            
+                    <div class="card-header text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 text-center">${pokemon.name}</div>
+                    <div class="card-body text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center">
+                        <p class="card-text">Id: ${pokemon.id}</p>
+                        <p class="card-text">Order: ${pokemon.order}</p>
+                        <p class="card-text">Weight: ${pokemon.weight}</p>
+                    </div>
+                </div>
             </div>
         </div>`
     })    
-
-    
 
 }
 

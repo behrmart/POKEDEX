@@ -14,7 +14,7 @@
     
 
 <!-- ************************** NAV window *************************** -->
-    <nav class="navbar bg-dark border-bottom border-bottom-dark bg-body-tertiary">
+    <nav class="navbar bg-primary border-bottom border-bottom-dark bg-body-tertiary">
         <div class="container-fluid">
         <a class="navbar-brand">Proyecto POKEDEX</a>
         <span class="navbar-text">
@@ -27,19 +27,22 @@
 <!-- ************************** SEARCH Button *************************** -->
     <div class="container-fluid">
         <div class="container-fluid">
-            <h4>Consulta la Pokémon API</h4>
+            <h4 class="p-sm-2 p-md-4 text-center">Consulta la API Pokémon!</h4>
+            <p class="text-center">https://pokeapi.co/</p>
         </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-text">Pokemon</span>
-            <input type="text" class="form-control" placeholder="Pokemon name" aria-label="Pokemon" aria-describedby="button-addon2" id="pokename">              
-            <button class="btn btn-outline-success" type="button" onclick="boton_buscar()">Buscar</button>
+        <div class="container-fluid p-sm-2 p-md-4">
+            <div class="input-group input-group-lg">
+                <span class="input-group-text">Pokemon ID o Nombre:</span>
+                <input type="text" class="form-control" placeholder="Pokemon name" aria-label="Pokemon" aria-describedby="button-addon2" id="pokename">              
+                <button class="btn btn-outline-success" type="button" onclick="boton_buscar()">Buscar</button>
+            </div>
         </div>
     </div>
 
 <!-- ************************** POKEMON CARD window *************************** -->
     
-<div class="container-fluid rounded border border-primary p-2" >
-    <div class="row row-cols-1 row-cols-md-4 g-4" id="pokecard">
+<div class="container-fluid rounded border border-warning p-2" >
+    <div class="row row-cols-1 justify-content-center" id="pokecard">
 
     </div>
 </div> 
