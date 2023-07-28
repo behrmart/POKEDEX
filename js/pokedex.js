@@ -16,12 +16,13 @@ function boton_buscar(){
     }
     
     loadPokemon(pokename.value,(pokemon) => {
+        console.log(pokemon);
         console.log(`Pokemon No.${pokemon.id} name is ${pokemon.name}`);
         let pokecard = document.getElementById("pokecard");
     /*Propiedad de JS para modificar contenido HTML, devuelve una cadena de texto */
         pokecard.innerHTML =    
         `<div class="card text-center">
-            <img src="img/${pokemon.name}.jpeg" class="card-img-top" alt="Pokemon image">
+            <img src="${pokemon.sprites.front_default}" class="card-img-top" alt="Pokemon image">
             <div class="card-header text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">
                 ${pokemon.name}
             </div>
