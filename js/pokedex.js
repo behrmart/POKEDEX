@@ -59,14 +59,14 @@ function boton_buscar(){
                 <div class="col-md-8">            
                     <div class="card-header text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 text-center"><h2>${pokemon.name}</h2></div>
                     <div class="card-body text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 text-center">
-                        <p class="card-text">Pokemon Id: ${pokemon.id}</p>
-                        <p class="card-text">Orden: ${pokemon.order}</p>
-                        <p class="card-text">Peso: ${pokemon.weight}</p>
-                        <p class="card-text"> Habilidad Principal: ${ability.name}</p>
-                        <p class="card-text"> Descripcion de Habilidad: ${ability.effect_entries.find(entry => entry.language.name === "en").effect}</p>
-                        <p class="card-text"> Habitat: ${species.habitat.name}</p>
-                        <p class="card-text"> Felicidad Base: ${species.base_happiness}</p>
-                        <p class="card-text"> Rango de Captura: ${species.capture_rate}</p>
+                        <p class="card-text">Pokemon Id: <span class="text-warning-emphasis">${pokemon.id}</span></p>
+                        <p class="card-text">Orden: <span class="text-warning-emphasis">${pokemon.order}</span></p>
+                        <p class="card-text">Peso: <span class="text-warning-emphasis">${pokemon.weight}</span></p>
+                        <p class="card-text"> Habilidad Principal: <span class="text-warning-emphasis">${ability.name}</span></p>
+                        <p class="card-text"> Descripcion de Habilidad: <span class="text-warning-emphasis">${ability.effect_entries.find(entry => entry.language.name === "en").effect}</span></p>
+                        <p class="card-text"> Habitat: <span class="text-warning-emphasis">${species.habitat.name}</span></p>
+                        <p class="card-text"> Felicidad Base: <span class="text-warning-emphasis">${species.base_happiness}</span></p>
+                        <p class="card-text"> Rango de Captura: <span class="text-warning-emphasis">${species.capture_rate}</span></p>
                     </div>
                 </div>
         `
