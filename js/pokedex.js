@@ -14,7 +14,7 @@ function boton_buscar(){
         .then(data => {
             console.log(data);
             cb(data)
-        });
+        }).catch(error => console.error('Error fetching pokemon:', error));
     }
 
     const loadPokemonAbility = (id, cb) => {
@@ -24,7 +24,7 @@ function boton_buscar(){
         .then(data => {
             console.log(data);
             cb(data)
-        });
+        }).catch(error => console.error('Error fetching abilities:', error));
     }
 
     const loadPokemonSpecies = (id, cb) => {
@@ -34,7 +34,7 @@ function boton_buscar(){
         .then(data => {
             console.log(data);
             cb(data)
-        });
+        }).catch(error => console.error('Error fetching species:', error));
     }
 
 
