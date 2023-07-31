@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyecto POKEDEX">
+    <meta name="description" content="Dev.F Proyecto POKEDEX">
   	<meta name="author" content="Bernardo Felipe Martínez Meave">
     <title>POKEDEX</title>
     <!-- bootstrap 5.3 -->
@@ -14,26 +14,26 @@
     
 
 <!-- ************************** NAV window *************************** -->
-    <nav class="navbar bg-primary border-bottom border-bottom-dark bg-body-tertiary">
+    <nav class="navbar" style="background-color: #1f618d;">
         <div class="container-fluid">
-        <a class="navbar-brand">Proyecto POKEDEX</a>
-        <span class="navbar-text">
-            Por Bernardo F. Martinez Meave
-        </span>
+            <a class="navbar-brand">Dev.F Proyecto POKEDEX</a>
+            <span class="navbar-text">
+                Javascript Avanzado
+            </span>
     
         </div>
     </nav>
 
 <!-- ************************** SEARCH Button *************************** -->
-    <div class="container-fluid">
+    <div class="container-fluid p-sm-2 p-md-4 text-center">
         <div class="container-fluid">
-            <h4 class="p-sm-2 p-md-4 text-center">Consulta la API Pokémon!</h4>
-            <p class="text-center">https://pokeapi.co/</p>
+            <h4>Consulta la API Pokémon!</h4>
+            <p>https://pokeapi.co/</p>
         </div>
         <div class="container-fluid p-sm-2 p-md-4">
-            <div class="input-group input-group-lg">
-                <span class="input-group-text">Pokemon ID o Nombre:</span>
-                <input type="text" class="form-control" placeholder="Pokemon name" aria-label="Pokemon" aria-describedby="button-addon2" id="pokename">              
+            <div class="input-group p-sm-2 p-md-4">
+                <span class="input-group-text">ID o Nombre:</span>
+                <input type="text" class="form-control" placeholder="ID o nombre" aria-label="Pokemon" aria-describedby="button-addon2" id="pokename">              
                 <button class="btn btn-outline-success" type="button" onclick="boton_buscar()">Buscar</button>
             </div>
         </div>
@@ -41,7 +41,7 @@
 
 <!-- ************************** POKEMON CARD window *************************** -->
     
-<div class="container-fluid rounded border border-warning p-2" >
+<div class="container-fluid rounded border border-warning p-sm-2 p-md-4" >
     <div class="row row-cols-1 justify-content-center">
         <div class="card mb-3" style="max-width: 540px;" >
             <div class="row g-0" id="pokecard">
