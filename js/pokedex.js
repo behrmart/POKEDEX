@@ -129,6 +129,12 @@ function boton_buscar2(button){
     
   let pokename = button.getAttribute("data-value");
   
+  var section = document.getElementById("startwin");
+  if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+
+
   //console.log(pokename);
   
   const loadPokemon = (id, cb) => {
