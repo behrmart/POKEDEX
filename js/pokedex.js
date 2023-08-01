@@ -35,6 +35,10 @@ function boton_buscar(){
             console.log(data);
             cb(data)
         }).catch(error => console.error('Error fetching species:', error));
+
+        array.forEach(element => {
+            
+        });
     }
 
 
@@ -81,3 +85,43 @@ function boton_buscar(){
 })
 
 }
+
+// ALL POKEMONS
+
+const baseUrl = 'https://pokeapi.co/api/v2';
+const pokedexContainer = document.getElementById('allPokemons');
+
+async function fetchPokemonData(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+async function fetchAllPokemon() {
+  try {
+    const response = await fetch(`${baseUrl}/pokemon?limit=350`); // Fetching the first 151 Pokémon for this example. `${baseUrl}/pokemon?limit=151` Limit number
+    const data = await response.json();
+    const pokemonList = data.results;
+
+    for (const pokemon of pokemonList) {
+      const pokemonData = await fetchPokemonData(pokemon.url);
+      displayPokemon(pokemonData);
+    }
+  } catch (error) {
+    console.error('Error fetching Pokémon data:', error);
+  }
+}
+
+function displayPokemon(pokemonData) {
+  const pokemonCard = document.createElement('div');
+  pokemonCard.classList.add('col');
+
+  pokemonCard.innerHTML = `
+    <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
+    <p>${pokemonData.name}</p>
+  `;
+
+  pokedexContainer.appendChild(pokemonCard);
+}
+
+fetchAllPokemon();
