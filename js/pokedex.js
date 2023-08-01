@@ -5,14 +5,14 @@ function boton_buscar(){
     
     let pokename = document.getElementById("pokename");
     
-    console.log(pokename.value);
+    //console.log(pokename.value);
     
     const loadPokemon = (id, cb) => {
-        console.log('******** Fetch and parse Pokemon API ***********************');
+        //console.log('******** Fetch and parse Pokemon API ***********************');
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            //console.log(data);
             cb(data)
         }).catch(error => console.error('Error fetching pokemon:', error));
     }
@@ -22,23 +22,20 @@ function boton_buscar(){
         fetch(`https://pokeapi.co/api/v2/ability/${id}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            //console.log(data);
             cb(data)
         }).catch(error => console.error('Error fetching abilities:', error));
     }
 
     const loadPokemonSpecies = (id, cb) => {
-        console.log('******** Fetch and parse Pokemon Species API ***********************');
+        //console.log('******** Fetch and parse Pokemon Species API ***********************');
         fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            //console.log(data);
             cb(data)
         }).catch(error => console.error('Error fetching species:', error));
 
-        array.forEach(element => {
-            
-        });
     }
 
 
@@ -117,7 +114,7 @@ function displayPokemon(pokemonData) {
   pokemonCard.classList.add('col');
 
   pokemonCard.innerHTML = `
-    <button type="button" class="btn btn-dark" onclick="boton_buscar2(this)" id="pokename" data-value="${pokemonData.name}">
+    <button type="button" class="btn btn-dark" onclick="boton_buscar2(this)" id="pokename" data-value="${pokemonData.name}" href="#startwin">
       <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
       <p>${pokemonData.name}</p>
     </button>
@@ -132,40 +129,37 @@ function boton_buscar2(button){
     
   let pokename = button.getAttribute("data-value");
   
-  console.log(pokename);
+  //console.log(pokename);
   
   const loadPokemon = (id, cb) => {
-      console.log('******** Fetch and parse Pokemon API ***********************');
+      //console.log('******** Fetch and parse Pokemon API ***********************');
       fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then(res => res.json())
       .then(data => {
-          console.log(data);
+          //console.log(data);
           cb(data)
       }).catch(error => console.error('Error fetching pokemon:', error));
   }
 
   const loadPokemonAbility = (id, cb) => {
-      console.log('******** Fetch and parse Pokemon Abilities API ***********************');
+      //console.log('******** Fetch and parse Pokemon Abilities API ***********************');
       fetch(`https://pokeapi.co/api/v2/ability/${id}`)
       .then(res => res.json())
       .then(data => {
-          console.log(data);
+          //console.log(data);
           cb(data)
       }).catch(error => console.error('Error fetching abilities:', error));
   }
 
   const loadPokemonSpecies = (id, cb) => {
-      console.log('******** Fetch and parse Pokemon Species API ***********************');
+      //console.log('******** Fetch and parse Pokemon Species API ***********************');
       fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
       .then(res => res.json())
       .then(data => {
-          console.log(data);
+          //console.log(data);
           cb(data)
       }).catch(error => console.error('Error fetching species:', error));
 
-      array.forEach(element => {
-          
-      });
   }
 
 
