@@ -193,6 +193,7 @@ function boton_buscar2(button) {
       console.log(
         `Pokemon No.${ability.id} ability is ${ability.name} abilities`
       );
+      console.log(pokemon);
 
       loadPokemonSpecies(pokemon.id, (species) => {
         console.log(`Pokemon No.${species.id} species is ${species.name}`);
